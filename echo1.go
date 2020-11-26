@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
 	Echo1()
 	echo2()
+	echo3()
 }
 
 // Echo1 echo
@@ -27,4 +29,8 @@ func echo2() {
 		blank = " "
 	}
 	fmt.Println(s)
+}
+
+func echo3() {
+	fmt.Println(strings.Join(os.Args[0:], " "))
 }
